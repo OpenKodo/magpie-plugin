@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to release
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Test
+        run: npm test
+
+      - name: Pack
+        id: pack
+        run: |
+          npm pack
+          file=$(ls -1 *.tgz | head -1)
+          echo "file=$file" >> "$GITHUB_OUTPUT"
+
+      - name: Attach the tarball to the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.pack.outputs.file }}
+          generate_release_notes: true

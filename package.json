@@ -1,0 +1,47 @@
+{
+  "name": "openkodo",
+  "displayName": "OpenKodo",
+  "version": "0.2.2",
+  "description": "OpenKodo plans, credits, usage windows, and models in OpenCode and magpie",
+  "type": "module",
+  "main": "./v1.mjs",
+  "exports": {
+    ".": "./v2.mjs",
+    "./plugin": "./v1.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "v1.mjs",
+    "v2.mjs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "openkodo",
+    "magpie",
+    "opencode-plugin",
+    "deepseek",
+    "glm",
+    "credits",
+    "usage",
+    "provider",
+    "auth"
+  ],
+  "homepage": "https://openkodo.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenKodo/openkodo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenKodo/openkodo/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
