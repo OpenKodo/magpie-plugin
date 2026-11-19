@@ -18,7 +18,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test test/*.test.mjs",
     "pack:check": "npm pack --dry-run"
   },
   "keywords": [
