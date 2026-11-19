@@ -1,6 +1,12 @@
 {
   "name": "openkodo",
-  "displayName": "OpenKodo",
+  "magpie": {
+    "name": "OpenKodo",
+    "summary": {
+      "en": "OpenKodo: plans, credits and usage windows",
+      "zh": "OpenKodo：套餐、额度与用量窗口"
+    }
+  },
   "version": "0.2.2",
   "description": "OpenKodo plans, credits, usage windows, and models in OpenCode and magpie",
   "type": "module",
