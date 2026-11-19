@@ -55,3 +55,13 @@ test("2.x setup publishes the provider, its models, and its icon", async () => {
   assert.equal(method.provider, "openkodo")
   assert.equal(method.type, "api")
 })
+
+// magpie titles a plugin row from package.json's magpie.name, not from the
+// npm name (which must be lowercase). Without this field the Plugins list
+// reads "openkodo".
+test("package.json names the plugin OpenKodo for magpie", async () => {
+  const { readFile } = await import("node:fs/promises")
+  const pkg = JSON.parse(await readFile(new URL("../package.json", import.meta.url), "utf8"))
+  assert.equal(pkg.name, "openkodo")
+  assert.equal(pkg.magpie.name, "OpenKodo")
+})
