@@ -1,0 +1,34 @@
+name: Publish to npm
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # npm provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Test before publishing
+        run: npm test
+
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "${NODE_AUTH_TOKEN}" ]; then
+            echo "::error::NPM_TOKEN is not set. Add an npm automation token in Settings → Secrets."
+            exit 1
+          fi
+          npm publish --access public --provenance
