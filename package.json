@@ -7,7 +7,7 @@
       "zh": "OpenKodo：套餐、额度与用量窗口"
     }
   },
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "OpenKodo plans, credits, usage windows, and models in OpenCode and magpie",
   "type": "module",
   "main": "./v1.mjs",

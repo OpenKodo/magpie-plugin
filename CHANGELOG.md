@@ -3,6 +3,12 @@
 All notable changes to this package. Versioned independently of the OpenKodo
 gateway.
 
+## 0.2.3
+
+- First public release on npm as `openkodo`.
+- Title the plugin **OpenKodo** through `magpie.name`, which is what magpie
+  reads for a package's own row (the npm name must stay lowercase).
+
 ## 0.2.2
 
 - Declare the provider icon on `auth`, which is where magpie reads it. 0.2.1
