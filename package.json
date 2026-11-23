@@ -4,8 +4,9 @@
     "name": "OpenKodo",
     "summary": {
       "en": "OpenKodo: plans, credits and usage windows",
-      "zh": "OpenKodo：套餐、额度与用量窗口"
-    }
+      "zh": "OpenKodo\uff1a\u5957\u9910\u3001\u989d\u5ea6\u4e0e\u7528\u91cf\u7a97\u53e3"
+    },
+    "icon": "https://openkodo.dev/openkodo-logo.svg"
   },
   "version": "0.2.3",
   "description": "OpenKodo plans, credits, usage windows, and models in OpenCode and magpie",
