@@ -4,7 +4,7 @@
     "name": "OpenKodo",
     "summary": {
       "en": "OpenKodo: plans, credits and usage windows",
-      "zh": "OpenKodo\uff1a\u5957\u9910\u3001\u989d\u5ea6\u4e0e\u7528\u91cf\u7a97\u53e3"
+      "zh": "OpenKodo：套餐、额度与用量窗口"
     },
     "icon": "https://openkodo.dev/openkodo-logo.svg"
   },
@@ -42,10 +42,10 @@
   "homepage": "https://openkodo.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OpenKodo/openkodo.git"
+    "url": "git+https://github.com/OpenKodo/magpie-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/OpenKodo/openkodo/issues"
+    "url": "https://github.com/OpenKodo/magpie-plugin/issues"
   },
   "engines": {
     "node": ">=18"
